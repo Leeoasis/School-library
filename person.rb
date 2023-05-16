@@ -1,6 +1,6 @@
 class Nameable
   def correct_name?
-      raise NotImplementedError, "Method 'correct_name' must be implemented in a subclass."
+    raise NotImplementedError, "Method 'correct_name' must be implemented in a subclass."
   end
 end
 
@@ -33,6 +33,7 @@ end
 
 class BaseDecorator < Nameable
   def initialize(nameable)
+    super()
     @nameable = nameable
   end
 
@@ -53,8 +54,3 @@ class TrimmerDecorator < BaseDecorator
     trimmed_name.length < @nameable.correct_name.length ? "#{trimmed_name}..." : trimmed_name
   end
 end
-
-
-
-
-
