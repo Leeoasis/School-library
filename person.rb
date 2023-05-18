@@ -17,8 +17,6 @@ class Person
 
   def add_rental(date, book)
     rental = Rental.new(date, book, self)
-    @rentals << rental
-    rental
   end
 
   private
